@@ -3,7 +3,7 @@
     {
       "key": "config1",
       "value": {
-        "url": "http://iptvserver.com/get.php?username=user&password=pwdH&type=m3u_plus&output=ts",
+        "url": "https://raw.githubusercontent.com/BuddyChewChew/tubi-scraper/refs/heads/main/tubi_playlist.m3u",
         "groupsToInclude": ["Sports", "Entertainment", "Science"],
         "channelsToExclude": ["Soccer", "MLB"]
       }
@@ -11,14 +11,14 @@
     {
       "key": "sportsonly",
       "value": {
-        "url": "http://anotheriptvserver.com/get.php?username=user&password=pwdH&type=m3u_plus&output=ts",
+        "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/refs/heads/main/playlists/roku_all.m3u",
         "groupsToInclude": ["Sports"]
       }
     },
     {
       "key": "full",
       "value": {
-        "url": "http://myserver.com/get.php?pwd=pwd"
+        "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/refs/heads/main/playlists/samsungtvplus_us.m3u"
       }
     }
   ]
