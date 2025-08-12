@@ -1,3 +1,4 @@
+
 {
   "profiles": [
     {
@@ -18,8 +19,10 @@
     {
       "key": "full",
       "value": {
-        "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/refs/heads/main/playlists/samsungtvplus_us.m3u"
+        "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/refs/heads/main/playlists/samsungtvplus_us.m3u",
+        "channelsToExclude": ["Confess by Nosey", "Rugby Pass TV", "Touched by an Angel", "Black Classics", "Shades of Black", "Car Chase", "CSI: Miami", "Sister, Sister", "Super Channel Hearties", "Hot Ones", "Hell's Kitchen", "Cash In The Attic", "Avatar", "Auction Hunters", "PRIDEtv", "Robot Wars by MECH+", "Operation Repo", "Hunter", "Beverly Hillbillies", "She Wrote", "The Bob Ross Channel", "Farscape", "The Original Series", "The Next Generation", "Final Conflict", "The Lost World", "The Graham Norton Show"]
       }
     }
   ]
 }
+
