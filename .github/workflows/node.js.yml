@@ -1,0 +1,43 @@
+name: Pluto TV Data Updater
+
+on:
+  schedule:
+    # Runs at 00:00 and 12:00 UTC (every 12 hours)
+    - cron: '0 */12 * * *'
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Needed for proper git history
+      
+      - name: Use Node.js LTS
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+          cache: 'npm'
+      
+      - run: npm install
+      - run: node index  # Generates *.m3u8 and *.xmltv files
+      
+      - name: Setup Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+      
+      - name: Commit and Push Updates
+        run: |
+          # Check if there are changes to commit
+          git add *.m3u8 *.xmltv
+          if git diff-index --quiet HEAD --; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto-update Pluto TV data [$(date +'%Y-%m-%d %H:%M')]"
+            git push
+          fi
