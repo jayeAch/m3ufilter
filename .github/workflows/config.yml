@@ -1,14 +1,67 @@
-name: Generate Config
+name: Generate and Update Config
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to generate config for'
+        required: true
+        default: 'production'
+        type: choice
+        options:
+          - development
+          - staging
+          - production
+      commit-changes:
+        description: 'Commit and push the updated config.json'
+        required: true
+        default: 'true'
+        type: boolean
 
 jobs:
-  generate:
+  generate-config:
     runs-on: ubuntu-latest
+    
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-python@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        # Fetch all history for all branches and tags
+        fetch-depth: 0
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
       with:
         python-version: '3.9'
-    - name: Run script
-      run: python generate-config.py
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        # Add any dependencies your script needs
+        # pip install -r requirements.txt
+
+    - name: Run generate-config.py
+      run: |
+        python generate-config.py --environment ${{ github.event.inputs.environment }}
+
+    - name: Commit and push changes
+      if: ${{ github.event.inputs.commit-changes == 'true' }}
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        
+        # Check if config.json was modified
+        if git diff --quiet HEAD -- config.json; then
+          echo "No changes to config.json"
+          exit 0
+        fi
+        
+        git add config.json
+        git commit -m "chore: update config.json for ${{ github.event.inputs.environment }} environment [skip ci]"
+        git push
+
+    - name: Show changes (dry run)
+      if: ${{ github.event.inputs.commit-changes != 'true' }}
+      run: |
+        echo "Dry run mode - showing diff:"
+        git diff config.json || echo "No changes to show"
