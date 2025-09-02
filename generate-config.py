@@ -269,7 +269,8 @@ GLOBAL_EXCLUDE_LIST = [
     "RetroCrush",
     "Ancient Aliens",
     "The Nanny",
-    "ALF"
+    "ALF",
+    "Bob Ross"
   ] 
 
 # Load the template file
