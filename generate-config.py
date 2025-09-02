@@ -265,7 +265,13 @@ GLOBAL_EXCLUDE_LIST = [
     "Corner Gas",
     "Hawaii Five-0",
     "Sketchy AF",
-    "Nash Bridges"
+    "Nash Bridges",
+    "RetroCrush",
+    "Ancient Aliens",
+    "The Nanny",
+    "ALF",
+    "FailArmy",
+    "Car Chase"
   ] 
 
 # Load the template file
