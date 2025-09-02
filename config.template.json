@@ -28,7 +28,7 @@
       "key": "SamsungTVPlusCA",
       "value": {
         "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/refs/heads/main/playlists/samsungtvplus_ca.m3u",
-        "groupsToInclude": ["Crime", "Comedy", "Movies", "Action,努力 & Drama", "Sci-Fi & Horror", "Entertainment", "Halloween"],
+        "groupsToInclude": ["Crime", "Comedy", "Movies", "Action & Drama", "Sci-Fi & Horror", "Entertainment", "Halloween"],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
     },
@@ -68,9 +68,9 @@
       "key": "MOVEONJOY",
       "value": {
         "url": "https://raw.githubusercontent.com/jayeAch/iptv/refs/heads/master/streams/us_moveonjoy.m3u",
-        "groupsToInclude": ["Crime TV", "Comedy", "Movies", "Action & Drama", "Sci-Fi & Horror", "Entertainment", "TV Series", "Horror & Sci-Fi", "Canada", "DrewLive Adult Swim 24/7",  "English", "Entertainment", "Hilay TV", "USA", "United Kingdom", "United States", "Halloween"],
+        "groupsToInclude": ["Crime TV", "Comedy", "Movies", "Action & Drama", "Sci-Fi & Horror", "Entertainment", "TV Series", "Horror & Sci-Fi", "Canada", "DrewLive Adult Swim 24/7", "English", "Entertainment", "Hilay TV", "USA", "United Kingdom", "United States", "Halloween"],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
+      }
     }
-  }
   ]
 }
