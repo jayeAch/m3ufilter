@@ -11,7 +11,7 @@
     {
       "key": "Roku",
       "value": {
-        "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/refs/heads/main/playlists/roku_all.m3u",
+        "url": "https://raw.githubusercontent.com/jayeAch/app-m3u-generator/refs/heads/main/playlists/roku_all.m3u",
         "groupsToInclude": ["Action", "Comedy", "Comedy Drama", "Crime", "Crime Drama", "Dark Comedy", "Drama", "Entertainment", "Horror", "Paranormal", "Sitcom", "Weather", "Halloween"],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
@@ -19,7 +19,7 @@
     {
       "key": "SamsungTVPlusUS",
       "value": {
-        "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/refs/heads/main/playlists/samsungtvplus_us.m3u",
+        "url": "https://raw.githubusercontent.com/jayeAch/app-m3u-generator/refs/heads/main/playlists/samsungtvplus_us.m3u",
         "groupsToInclude": ["Crime", "Comedy", "Movies", "Action & Drama", "Sci-Fi & Horror", "Entertainment", "Halloween"],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
@@ -27,7 +27,7 @@
     {
       "key": "SamsungTVPlusCA",
       "value": {
-        "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/refs/heads/main/playlists/samsungtvplus_ca.m3u",
+        "url": "https://raw.githubusercontent.com/jayeAch/app-m3u-generator/refs/heads/main/playlists/samsungtvplus_ca.m3u",
         "groupsToInclude": ["Crime", "Comedy", "Movies", "Action & Drama", "Sci-Fi & Horror", "Entertainment", "Halloween"],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
@@ -35,7 +35,7 @@
     {
       "key": "SamsungTVPlusGB",
       "value": {
-        "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/refs/heads/main/playlists/plutotv_gb.m3u",
+        "url": "https://raw.githubusercontent.com/jayeAch/app-m3u-generator/refs/heads/main/playlists/plutotv_gb.m3u",
         "groupsToInclude": ["Crime", "Comedy", "Movies", "Action & Drama", "Sci-Fi & Horror", "Entertainment", "TV Series", "Halloween"],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
@@ -57,10 +57,18 @@
       }
      },
     {
+      "key": "PlutoTV_All",
+      "value": {
+        "url": "https://raw.githubusercontent.com/jayeAch/pluto_tv_scraper/refs/heads/main/plutotv_all.m3u8",
+        "groupsToInclude": [],
+        "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
+      }
+    },
+  {
       "key": "Hilay",
       "value": {
-        "url": "https://hilay.tv/play.m3u",
-        "groupsToInclude": ["Action", "Canada", "Classic TV", "Comedy", "Comedy Drama", "Comedy;Entertainment", "Crime", "Crime Drama", "DaddyLive UK", "DaddyLive USA", "Dark Comedy", "Drama", "DrewLive Adult Swim 24/7", "DrewLive Anime - Berserk (1997)", "DrewLive Anime - DBZ", "DrewLive VOD", "English", "Entertainment", "Horror", "Movies", "Paranormal", "Sci-Fi", "Science Fiction", "Sitcom", "True Crime", "UK", "USA", "Uncategorized", "United Kingdom", "United States", "Weather"],
+        "url": "https://raw.githubusercontent.com/jayeAch/Hilay-TV-M3U/refs/heads/main/hilaytv.m3u",
+        "groupsToInclude": [],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
     }
