@@ -28,7 +28,7 @@
       "key": "SamsungTVPlusCA",
       "value": {
         "url": "https://raw.githubusercontent.com/jayeAch/app-m3u-generator/refs/heads/main/playlists/samsungtvplus_ca.m3u",
-        "groupsToInclude": ["Movies", "Sci-Fi & Horror", "Entertainment", "Ambiance", Comedy", "Crime"],
+        "groupsToInclude": ["Movies", "Sci-Fi & Horror", "Entertainment", "Ambiance", "Comedy", "Crime"],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
     },
