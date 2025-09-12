@@ -4,7 +4,7 @@
       "key": "Tubi",
       "value": {
         "url": "https://raw.githubusercontent.com/jayeAch/app-m3u-generator/refs/heads/main/playlists/tubi_all.m3u",
-        "groupsToInclude": ["Movie Channels", "Horror", "Local News", "Mystery", "TV Dramas", "Tubi Originals", "Kids & Family", "Comedy", "Weather", "True Crime", "Sci-Fi & Supernatural", "Classic TV"],
+        "groupsToInclude": ["Movie Channels", "Horror", "Mystery", "TV Dramas", "Tubi Originals", "Kids & Family", "Comedy", "Weather", "True Crime", "Sci-Fi & Supernatural", "Classic TV", "Halloween"],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
     },
@@ -12,7 +12,24 @@
       "key": "Roku",
       "value": {
         "url": "https://raw.githubusercontent.com/jayeAch/app-m3u-generator/refs/heads/main/playlists/roku_all.m3u",
-        "groupsToInclude": ["Dark Comedy", "Weather", "Animated", "Comedy Drama", "Uncategorized", "Science Fiction", "Action", "Adventure", "Crime Drama", "Entertainment", "Paranormal", "Crime", "Horror", "Comedy", "Sitcom", "Drama"],
+        "groupsToInclude": [
+          "Dark Comedy",
+          "Weather",
+          "Comedy Drama",
+          "Uncategorized",
+          "Science Fiction",
+          "Action",
+          "Adventure",
+          "Crime Drama",
+          "Entertainment",
+          "Paranormal",
+          "Crime",
+          "Horror",
+          "Comedy",
+          "Sitcom",
+          "Drama",
+          "Halloween"
+        ],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
     },
@@ -20,7 +37,15 @@
       "key": "SamsungTVPlusUS",
       "value": {
         "url": "https://raw.githubusercontent.com/jayeAch/app-m3u-generator/refs/heads/main/playlists/samsungtvplus_us.m3u",
-        "groupsToInclude": ["Ambiance", "Movies", "Sci-Fi & Horror", "Action & Drama", "Comedy", "Crime"],
+        "groupsToInclude": [
+          "Ambiance",
+          "Movies",
+          "Sci-Fi & Horror",
+          "Action & Drama",
+          "Comedy",
+          "Crime",
+          "Halloween"
+        ],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
     },
@@ -28,7 +53,15 @@
       "key": "SamsungTVPlusCA",
       "value": {
         "url": "https://raw.githubusercontent.com/jayeAch/app-m3u-generator/refs/heads/main/playlists/samsungtvplus_ca.m3u",
-        "groupsToInclude": ["Movies", "Sci-Fi & Horror", "Entertainment", "Ambiance", "Comedy", "Crime"],
+        "groupsToInclude": [
+          "Movies",
+          "Sci-Fi & Horror",
+          "Entertainment",
+          "Ambiance",
+          "Comedy",
+          "Crime",
+          "Halloween"
+        ],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
     },
@@ -36,7 +69,13 @@
       "key": "SamsungTVPlusGB",
       "value": {
         "url": "https://raw.githubusercontent.com/jayeAch/app-m3u-generator/refs/heads/main/playlists/plutotv_gb.m3u",
-        "groupsToInclude": ["Movies", "Entertainment", "Crime", "TV Series" ],
+        "groupsToInclude": [
+          "Movies",
+          "Entertainment",
+          "Crime",
+          "TV Series",
+          "Halloween"
+        ],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
     },
@@ -44,7 +83,15 @@
       "key": "XUMO",
       "value": {
         "url": "https://raw.githubusercontent.com/BuddyChewChew/xumo-playlist-generator/refs/heads/main/playlists/xumo_playlist.m3u",
-        "groupsToInclude": ["Movies", "Local News", "Action & Drama", "Comedy", "Crime TV", "Horror & Sci-Fi", "Classic TV"],
+        "groupsToInclude": [
+          "Movies",
+          "Action & Drama",
+          "Comedy",
+          "Crime TV",
+          "Horror & Sci-Fi",
+          "Classic TV",
+          "Halloween"
+        ],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
     },
@@ -52,33 +99,83 @@
       "key": "LocalNow",
       "value": {
         "url": "https://www.apsattv.com/localnow.m3u",
-        "groupsToInclude": ["LocalNow🇺🇸: Movies and TV", "LocalNow🇺🇸: More Cities", "LocalNow🇺🇸: Recommended", "LocalNow🇺🇸: My City", "LocalNow🇺🇸: Action", "LocalNow🇺🇸: True Crime", "LocalNow🇺🇸: Entertainment", "LocalNow🇺��: More Cities", "LocalNow🇺🇸: New on Local Now", "LocalNow🇺🇸: Horror and SciFi", "LocalNow🇺🇸: Comedy", "LocalNow🇺🇸: Drama"],
+        "groupsToInclude": [
+          "LocalNow🇺🇸: Movies and TV",
+          "LocalNow🇺🇸: Recommended",
+          "LocalNow🇺🇸: Action",
+          "LocalNow🇺🇸: True Crime",
+          "LocalNow🇺🇸: Entertainment",
+          "LocalNow🇺🇸: New on Local Now",
+          "LocalNow🇺🇸: Horror and SciFi",
+          "LocalNow🇺🇸: Comedy",
+          "LocalNow🇺🇸: Drama"
+        ],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
-     },
+    },
     {
       "key": "PlutoTV_US",
       "value": {
-        "url": "https://raw.githubusercontent.com/jayeAch/app-m3u-generator/refs/heads/main/playlists/plutotv_us.m3u",
-        "groupsToInclude": ["Movies", "Entertainment", "Comedy", "True Crime", "Drama", "Sci-Fi", "Classic TV"],
-        "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
-      }
-    },
- {
-      "key": "PlutoTV_NO",
-      "value": {
-        "url": "https://raw.githubusercontent.com/jayeAch/app-m3u-generator/refs/heads/main/playlists/plutotv_no.m3u",
-        "groupsToInclude": ["Skrekktember", "Komedie", "Sci-fi og anime", "Overnaturlig", "South Park", "Nytt på Pluto TV", "Film"],
-        "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
-      }
-    },
-  {
-      "key": "Hilay",
-      "value": {
-        "url": "https://raw.githubusercontent.com/jayeAch/Hilay-TV-M3U/refs/heads/main/hilaytv.m3u",
+        "url": "https://raw.githubusercontent.com/jayeAch/pluto_tv_scraper/refs/heads/main/plutotv_US.m3u8",
         "groupsToInclude": [],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
+    },
+    {
+      "key": "PlutoTV_NO",
+      "value": {
+        "url": "https://raw.githubusercontent.com/jayeAch/pluto_tv_scraper/refs/heads/main/plutotv_NO.m3u8",
+        "groupsToInclude": [],
+        "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
+      }
+    },
+    {
+      "key": "PlutoTV_DK",
+      "value": {
+        "url": "https://raw.githubusercontent.com/jayeAch/pluto_tv_scraper/refs/heads/main/plutotv_DK.m3u8",
+        "groupsToInclude": [],
+        "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
+      }
+    },
+    {
+      "key": "PlutoTV_SE",
+      "value": {
+        "url": "https://raw.githubusercontent.com/jayeAch/pluto_tv_scraper/refs/heads/main/plutotv_SE.m3u8",
+        "groupsToInclude": [],
+        "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
+      }
+    },
+    {
+      "key": "PlutoTV_GB",
+      "value": {
+        "url": "https://raw.githubusercontent.com/jayeAch/pluto_tv_scraper/refs/heads/main/plutotv_GB.m3u8",
+        "groupsToInclude": [],
+        "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
+      }
+    },
+    {
+      "key": "PlutoTV_CA",
+      "value": {
+        "url": "https://raw.githubusercontent.com/jayeAch/pluto_tv_scraper/refs/heads/main/plutotv_CA.m3u8",
+        "groupsToInclude": [],
+        "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
+      }
+    },
+    {
+      "key": "Stirr",
+      "value": {
+        "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/refs/heads/main/playlists/stirr_all.m3u",
+        "groupsToInclude": ["Documentary Series, Paranormal Series", "Paranormal Series", "Entertainment Live", "Comedy Live", "Documentary Series, Entertainment Live", "News Flash Live, Entertainment Live", "News Flash Live, STIRR Cities", "Comedy Live, Entertainment Live"],
+        "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
+      }
+    },
+    {
+      "key": "Hilay",
+      "value": {
+        "url": "https://raw.githubusercontent.com/jayeAch/Hilay-TV-M3U/refs/heads/main/hilaytv.m3u",
+        "groupsToInclude": {{GLOBAL_EXCLUDE_LIST}},
+        "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
+      }
     }
-   ]
-  }
+  ]
+}
