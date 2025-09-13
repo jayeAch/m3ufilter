@@ -2,7 +2,8 @@ import json
 
 # Define the massive list ONCE. PASTE YOUR FULL LIST HERE.
 GLOBAL_EXCLUDE_LIST = [
-" FOX45 WBFF Baltimore - Free Live Local News Stream",
+"Revolt Mixtape",
+"FOX45 WBFF Baltimore - Free Live Local News Stream",
 "10 NBC WJAR - (Providence RI*)",
 "123 GO!",
 "6 NEWS NBC - WJAC - (Johnstown PA*)",
