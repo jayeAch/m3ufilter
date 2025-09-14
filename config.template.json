@@ -38,7 +38,6 @@
       "value": {
         "url": "https://raw.githubusercontent.com/jayeAch/app-m3u-generator/refs/heads/main/playlists/samsungtvplus_us.m3u",
         "groupsToInclude": [
-          "Ambiance",
           "Movies",
           "Sci-Fi & Horror",
           "Action & Drama",
@@ -57,7 +56,6 @@
           "Movies",
           "Sci-Fi & Horror",
           "Entertainment",
-          "Ambiance",
           "Comedy",
           "Crime",
           "Halloween"
@@ -166,6 +164,30 @@
       "value": {
         "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/refs/heads/main/playlists/stirr_all.m3u",
         "groupsToInclude": ["Documentary Series, Paranormal Series", "Paranormal Series", "Entertainment Live", "Comedy Live", "Documentary Series, Entertainment Live", "News Flash Live, Entertainment Live", "News Flash Live, STIRR Cities", "Comedy Live, Entertainment Live"],
+        "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
+      }
+    },
+    {
+      "key": "Plex_AU",
+      "value": {
+        "url": "https://raw.githubusercontent.com/jayeAch/app-m3u-generator/refs/heads/main/playlists/plex_au.m3u",
+        "groupsToInclude": ["Movies", "Chills & Thrills", "Uncategorized", "Comedy", "Hit TV", "Sci-Fi & Action", "Drama TV", "True Crime"],
+        "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
+      }
+    },
+    {
+      "key": "Plex_CA",
+      "value": {
+        "url": "https://raw.githubusercontent.com/jayeAch/app-m3u-generator/refs/heads/main/playlists/plex_ca.m3u",
+        "groupsToInclude": ["International", "Movies", "Chills & Thrills", "Uncategorized", "Comedy", "Hit TV", "Sci-Fi & Action", "Drama TV", "True Crime"],
+        "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
+      }
+    },
+    {
+      "key": "Plex_US",
+      "value": {
+        "url": "https://raw.githubusercontent.com/jayeAch/app-m3u-generator/refs/heads/main/playlists/plex_us.m3u",
+        "groupsToInclude": ["International", "Movies", "Chills & Thrills", "Uncategorized", "Movies, Drama TV", "Comedy", "Hit TV", "Sci-Fi & Action", "True Crime"],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
     },
