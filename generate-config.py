@@ -2,6 +2,8 @@ import json
 
 # Define the massive list ONCE. PASTE YOUR FULL LIST HERE.
 GLOBAL_EXCLUDE_LIST = [
+"Curse of Oak Island",
+"The UnXplained with William Shatner",
 "^Mystery Science Theater 3000$",
 "Who's the Boss?",
 "Family Hour TV",

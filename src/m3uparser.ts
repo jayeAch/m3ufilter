@@ -19,6 +19,9 @@ const parseFileAsString = (options?: FilterOptions): string => {
   const fileContentLines = options.fileContents.split("\n");
   const output = ["#EXTM3U"];
   
+  let currentGroup: string | null = null;
+  let currentGroupIncluded: boolean = false;
+  
   for (let i = 0; i < fileContentLines.length; i++) {
     let line = fileContentLines[i].trim();
     try {
@@ -30,14 +33,18 @@ const parseFileAsString = (options?: FilterOptions): string => {
         // Check if channel should be excluded first
         if (shouldChannelBeExcluded(line, options?.channelsToExclude)) {
           i++; // Skip the URL line that follows this metadata
+          currentGroup = null;
+          currentGroupIncluded = false;
           continue;
         }
         
-        const currentGroup = extractGroupName(line);
+        currentGroup = extractGroupName(line);
         if (currentGroup === null) throw `Group null on line ${i}: ${line}`;
         
         // Check if group should be included
-        if (shouldGroupBeIncluded(currentGroup, options?.groupsToInclude)) {
+        currentGroupIncluded = shouldGroupBeIncluded(currentGroup, options?.groupsToInclude);
+        
+        if (currentGroupIncluded) {
           output.push(line); // Push the metadata line
           
           // Push the URL line that follows (if it exists)
@@ -50,9 +57,10 @@ const parseFileAsString = (options?: FilterOptions): string => {
         continue;
       }
       
-      // For non-metadata lines (like #EXTGRP), push them if we're in an included group
-      // Note: This part might need additional logic depending on your M3U file structure
-      output.push(line);
+      // For non-metadata lines, only push them if we're currently in an included group
+      if (currentGroupIncluded && line.length > 0) {
+        output.push(line);
+      }
       
     } catch (e) {
       throw `Error parsing line ${i}: '${e}'.\nLine: '${line}'.`;
