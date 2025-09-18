@@ -195,7 +195,15 @@
       "key": "Hilay",
       "value": {
         "url": "https://raw.githubusercontent.com/jayeAch/Hilay-TV-M3U/refs/heads/main/hilaytv.m3u",
-        "groupsToInclude": {{GLOBAL_EXCLUDE_LIST}},
+        "groupsToInclude": [],
+        "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
+      }
+    },
+    {
+      "key": "MOVEONJOY",
+      "value": {
+        "url": "https://raw.githubusercontent.com/jayeAch/iptv/refs/heads/master/streams/us_moveonjoy.m3u",
+        "groupsToInclude": [],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
     }

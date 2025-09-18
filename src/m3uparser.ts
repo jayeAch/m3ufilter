@@ -9,133 +9,124 @@ export const filterM3u = (options?: FilterOptions): string => {
 };
 
 const parseFileAsString = (options?: FilterOptions): string => {
-  const nothingToDo =
-    shouldAllGroupsBeReturned(options) && noChannelsToExclude(options);
-  if (nothingToDo) {
+  // Early return if no filtering needed
+  if (shouldAllGroupsBeReturned(options) && noChannelsToExclude(options)) {
     return options.fileContents;
   }
-  const isExcludedLine = (line: string) => line.startsWith("#EXTM3U");
-  const isMetadataLine = (line: string) => line.startsWith("#EXTINF");
+
   const fileContentLines = options.fileContents.split("\n");
-  const output = ["#EXTM3U"];
+  const output: string[] = ['#EXTM3U'];
   
+  // Pre-compile regex patterns for better performance
+  const groupTitlePatterns = [
+    /group-title="([^"]*)"/,
+    /group-title='([^']*)'/,
+    /group-title=([^,\s]+)/
+  ];
+  
+  const channelNamePatterns = [
+    /tvg-name="([^"]*)"/,
+    /tvg-name='([^']*)'/,
+    /tvg-name=([^,\s]+)/
+  ];
+
+  // Pre-process exclusion patterns for case-insensitive matching
+  const excludedChannelsLower = options?.channelsToExclude?.map(ch => ch.toLowerCase()) || [];
+  const includedGroupsSet = new Set(options?.groupsToInclude || []);
+
   let currentGroup: string | null = null;
-  let currentGroupIncluded: boolean = false;
-  
-  for (let i = 0; i < fileContentLines.length; i++) {
-    let line = fileContentLines[i].trim();
-    try {
-      if (isExcludedLine(line)) {
-        continue;
-      }
-      
-      if (isMetadataLine(line)) {
-        // Check if channel should be excluded first
-        if (shouldChannelBeExcluded(line, options?.channelsToExclude)) {
-          i++; // Skip the URL line that follows this metadata
-          currentGroup = null;
-          currentGroupIncluded = false;
-          continue;
-        }
-        
-        currentGroup = extractGroupName(line);
-        if (currentGroup === null) throw `Group null on line ${i}: ${line}`;
-        
-        // Check if group should be included
-        currentGroupIncluded = shouldGroupBeIncluded(currentGroup, options?.groupsToInclude);
-        
-        if (currentGroupIncluded) {
-          output.push(line); // Push the metadata line
-          
-          // Push the URL line that follows (if it exists)
-          if (i + 1 < fileContentLines.length) {
-            const urlLine = fileContentLines[i + 1].trim();
-            output.push(urlLine);
-          }
-        }
-        i++; // Skip the URL line since we've already processed it
-        continue;
-      }
-      
-      // For non-metadata lines, only push them if we're currently in an included group
-      if (currentGroupIncluded && line.length > 0) {
-        output.push(line);
-      }
-      
-    } catch (e) {
-      throw `Error parsing line ${i}: '${e}'.\nLine: '${line}'.`;
+  let currentGroupIncluded = false;
+  let i = 0;
+
+  while (i < fileContentLines.length) {
+    const line = fileContentLines[i].trim();
+    
+    // Skip empty lines and EXTMLU header
+    if (!line || line === '#EXTM3U') {
+      i++;
+      continue;
     }
+
+    if (line.startsWith('#EXTINF')) {
+      // Check channel exclusion first (cheaper check)
+      if (excludedChannelsLower.length > 0 && shouldChannelBeExcludedFast(line, excludedChannelsLower, channelNamePatterns)) {
+        i += 2; // Skip metadata line and URL line
+        currentGroup = null;
+        currentGroupIncluded = false;
+        continue;
+      }
+
+      // Extract group name with optimized function
+      currentGroup = extractGroupNameFast(line, groupTitlePatterns);
+      
+      // Check group inclusion
+      currentGroupIncluded = shouldGroupBeIncludedFast(currentGroup, includedGroupsSet);
+      
+      if (currentGroupIncluded) {
+        output.push(line); // Push metadata line
+        
+        // Push URL line if it exists
+        if (i + 1 < fileContentLines.length) {
+          output.push(fileContentLines[i + 1].trim());
+        }
+      }
+      
+      i += 2; // Skip to next metadata line
+      continue;
+    }
+
+    // For non-metadata lines in included groups
+    if (currentGroupIncluded && line.length > 0) {
+      output.push(line);
+    }
+    
+    i++;
   }
-  return convertToStringWithLineBreak(output);
+  
+  return output.join('\n') + '\n';
 };
 
-const shouldAllGroupsBeReturned = (options?: FilterOptions) => {
+// Optimized helper functions
+const shouldAllGroupsBeReturned = (options?: FilterOptions): boolean => {
   return !options?.groupsToInclude || options.groupsToInclude.length === 0;
 };
 
-const noChannelsToExclude = (options?: FilterOptions) => {
-  return options?.channelsToExclude?.length === 0;
+const noChannelsToExclude = (options?: FilterOptions): boolean => {
+  return !options?.channelsToExclude || options.channelsToExclude.length === 0;
 };
 
-const shouldGroupBeIncluded = (group: string, channelsToInclude?: string[]) => {
-  if (channelsToInclude === undefined || channelsToInclude.length === 0)
-    return true;
-  if (group === "") return false;
-  return channelsToInclude.includes(group);
+const shouldGroupBeIncludedFast = (group: string, includedGroupsSet: Set<string>): boolean => {
+  return includedGroupsSet.size === 0 || (group && includedGroupsSet.has(group));
 };
 
-const shouldChannelBeExcluded = (
-  line: string,
-  excludedKeywords?: string[]
+const shouldChannelBeExcludedFast = (
+  line: string, 
+  excludedChannelsLower: string[], 
+  patterns: RegExp[]
 ): boolean => {
-  if (!excludedKeywords || excludedKeywords.length === 0) return false;
+  const channelName = extractParameterFromPatterns(line, patterns) || extractChannelNameFromTitle(line);
   
-  // Try to extract channel name using multiple patterns
-  const channelName = extractParameterFromRegex(line, /tvg-name="([^"]*)"/) ||
-                     extractParameterFromRegex(line, /tvg-name='([^']*)'/) ||
-                     extractParameterFromRegex(line, /tvg-name=([^,\s]+)/) ||
-                     extractChannelNameFromTitle(line);
+  if (!channelName) return false;
   
-  // If we found a channel name, check if it contains any excluded keywords
-  if (channelName) {
-    return excludedKeywords.some(excludeKeyword => 
-      channelName.toLowerCase().includes(excludeKeyword.toLowerCase())
-    );
-  }
-  
-  return false;
+  const channelNameLower = channelName.toLowerCase();
+  return excludedChannelsLower.some(excludeKeyword => 
+    channelNameLower.includes(excludeKeyword)
+  );
 };
 
-const extractGroupName = (line: string) => {
-  // Try multiple patterns to extract group title
-  const groupTitle = extractParameterFromRegex(line, /group-title="([^"]*)"/) ||
-                    extractParameterFromRegex(line, /group-title='([^']*)'/) ||
-                    extractParameterFromRegex(line, /group-title=([^,\s]+)/) ||
-                    "Unknown";
-  
-  if (groupTitle === "Unknown") {
-    console.warn(`No group-title found for line: ${line}`);
-  }
-  return groupTitle;
+const extractGroupNameFast = (line: string, patterns: RegExp[]): string => {
+  return extractParameterFromPatterns(line, patterns) || "Unknown";
 };
 
-const extractParameterFromRegex = (line: string, regexp: RegExp): string | null => {
-  const match = line.match(regexp);
-  return match ? match[1] : null;
-};
-
-const extractChannelNameFromTitle = (line: string): string | null => {
-  // Extract channel name from the title part (after the comma)
-  const commaIndex = line.lastIndexOf(',');
-  if (commaIndex !== -1) {
-    return line.substring(commaIndex + 1).trim();
+const extractParameterFromPatterns = (line: string, patterns: RegExp[]): string | null => {
+  for (const pattern of patterns) {
+    const match = line.match(pattern);
+    if (match) return match[1];
   }
   return null;
 };
 
-const convertToStringWithLineBreak = (lines: string[]): string => {
-  const linesAsString = lines.join("\n");
-  return linesAsString.endsWith("\n")
-    ? linesAsString
-    : linesAsString.concat("\n");
+const extractChannelNameFromTitle = (line: string): string | null => {
+  const commaIndex = line.indexOf(',');
+  return commaIndex !== -1 ? line.substring(commaIndex + 1).trim() : null;
 };
