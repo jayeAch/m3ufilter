@@ -2,6 +2,16 @@ import json
 
 # Define the massive list ONCE. PASTE YOUR FULL LIST HERE.
 GLOBAL_EXCLUDE_LIST = [
+"Pluto TV Handboll",
+"Hogan's Heroes",
+"Next Top Model",
+"Den gode gerning",
+"Simba Prisen",
+"Lyxfällan Norge",
+"South Park En Français",
+"World Billiards TV",
+"NEW KFOOD",
+"Geraldo Rivera",
 "Generation Drama",
 "Nikita",
 "Scare Tactics",
