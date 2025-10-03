@@ -1,0 +1,26 @@
+name: Download EPG
+on:
+  schedule:
+    # Run daily at 3 AM UTC
+    - cron: '0 3 * * *'
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  download-epg:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Download EPG file
+      run: |
+        wget https://tvpass.org/epg.xml -O epg.xml
+        
+    - name: Commit and push if changed
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add epg.xml
+        git diff --quiet && git diff --staged --quiet || git commit -m "Update EPG file - $(date)"
+        git push
