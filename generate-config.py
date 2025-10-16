@@ -2,6 +2,10 @@ import json
 
 # Define the massive list ONCE. PASTE YOUR FULL LIST HERE.
 GLOBAL_EXCLUDE_LIST = [
+"SUMO",
+"NHL",
+"MLB",
+"Punk'd",
 "Master Chef",
 "Renegade",
 "Preston & Brianna",

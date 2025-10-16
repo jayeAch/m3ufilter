@@ -191,6 +191,15 @@
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
     },
+
+    {
+      "key": "TV",
+      "value": {
+        "url": "https://raw.githubusercontent.com/BuddyChewChew/My-Streams/refs/heads/main/tv.m3u",
+        "groupsToInclude": [],
+        "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
+      }
+    },
     {
       "key": "TheTVApp",
       "value": {
