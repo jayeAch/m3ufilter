@@ -1,8 +1,8 @@
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 
 export interface DownloadResponse {
   data: string;
-  headers?: {
+  headers: {
     "content-type"?: string;
     "content-description"?: string;
     "expires"?: string;
@@ -11,26 +11,39 @@ export interface DownloadResponse {
   };
 }
 
-const setHeader = (headerName: keyof NonNullable<DownloadResponse['headers']>, axiosHeaders: any, response: DownloadResponse) => {
-  if (axiosHeaders[headerName]) {
-    response.headers[headerName] = axiosHeaders[headerName].toString();
-  }
-}
+const DESIRED_HEADERS = [
+  "content-type",
+  "content-description",
+  "expires",
+  "cache-control",
+  "content-disposition",
+] as const;
+
+const copyDesiredHeaders = (
+  srcHeaders: AxiosResponse["headers"],
+  dest: DownloadResponse
+): void => {
+  DESIRED_HEADERS.forEach((headerName) => {
+    const value = srcHeaders[headerName];
+    if (value) {
+      dest.headers[headerName] = Array.isArray(value) ? value[0] : value.toString();
+    }
+  });
+};
 
 export const download = async (options: {
   url: string;
 }): Promise<DownloadResponse> => {
-  const m3uServerResponse = await axios.get(options.url, {
-    headers: { Accept: "*/*", method: "get" },
-  });
-  const response: DownloadResponse = {
-    data: m3uServerResponse.data, 
-    headers: {}
+  try {
+    const axiosResponse: AxiosResponse = await axios.get(options.url);
+    const response: DownloadResponse = {
+      data: typeof axiosResponse.data === "string" ? axiosResponse.data : axiosResponse.data.toString(),
+      headers: {},
+    };
+    copyDesiredHeaders(axiosResponse.headers, response);
+    return response;
+  } catch (error) {
+    // Re-throw with context, or handle as needed (e.g., return a default response)
+    throw new Error(`Failed to download from ${options.url}: ${error}`);
   }
-  setHeader("content-type", m3uServerResponse.headers, response);
-  setHeader("content-description", m3uServerResponse.headers, response);
-  setHeader("expires", m3uServerResponse.headers, response);
-  setHeader("cache-control", m3uServerResponse.headers, response);
-  setHeader("content-disposition", m3uServerResponse.headers, response);
-  return response;
 };
