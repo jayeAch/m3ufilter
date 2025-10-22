@@ -59,7 +59,7 @@ export const handleGetm3u = async (options: {
 
   try {
     const args = parseRequestParams(options.req);
-    const filterOptions = getFilterOptionsFromUrlOrConfig(args);
+    const filterOptions = await getFilterOptionsFromUrlOrConfig(args); // Await the async function
     const serverResponse = await download({ url: filterOptions.url });
 
     // Quick performance win: Size limit to prevent memory issues (consider streaming for large files)
@@ -152,7 +152,13 @@ const parseRequestParams = (req: Request): GetM3uArgs => {
   }
 };
 
-const getFilterOptionsFromUrlOrConfig = (args: GetM3uArgs) => {
+interface FilterOptions {
+  url: string;
+  groupsToInclude?: string[];
+  channelsToExclude?: string[];
+}
+
+const getFilterOptionsFromUrlOrConfig = async (args: GetM3uArgs): Promise<FilterOptions> => {
   if ('url' in args) {
     return {
       channelsToExclude: parseArrayParam(args.channelsToExclude), // Re-parse to trim
@@ -160,7 +166,11 @@ const getFilterOptionsFromUrlOrConfig = (args: GetM3uArgs) => {
       url: args.url,
     };
   } else if ('profileKey' in args) {
-    const config: ConfigFile = loadConfig();
+    // Override to use local config in project root
+    const config: ConfigFile = await loadConfig({ 
+      configFile: './config.json',  // Points to current dir
+      log: process.env.NODE_ENV !== 'production'  // Optional: dev logging
+    });
     const profile = getConfigItem(args.profileKey, config);
     return {
       channelsToExclude: parseArrayParam(profile.channelsToExclude), // Ensure trimmed
