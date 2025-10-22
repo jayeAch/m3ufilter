@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "prestart": "npm run build",
-    "start": "node --max-old-space-size=768 --optimize-for-size --max-semi-space-size=64 dist/app-controller.js",
+    "start": "node --max-old-space-size=768 --optimize-for-size --max-semi-space-size=64 --turbo-filter='M3UFilterStream|handleGetm3u' dist/app-controller.js",
     "test": "jest"
   },
   "author": "gewton",
