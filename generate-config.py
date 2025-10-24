@@ -2,6 +2,7 @@ import json
 
 # Define the massive list ONCE. PASTE YOUR FULL LIST HERE.
 GLOBAL_EXCLUDE_LIST = [
+"Shop LC",
 "Filmrise Creators",
 "SUMO",
 "NHL",
