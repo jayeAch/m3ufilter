@@ -168,30 +168,13 @@
       }
     },
     {
-      "key": "Plex_AU",
+      "key": "Plex_All",
       "value": {
-        "url": "https://raw.githubusercontent.com/jayeAch/app-m3u-generator/refs/heads/main/playlists/plex_au.m3u",
-        "groupsToInclude": ["Movies", "Chills & Thrills", "Uncategorized", "Comedy", "Hit TV", "Sci-Fi & Action", "Drama TV", "True Crime"],
+        "url": "https://raw.githubusercontent.com/jayeAch/app-m3u-generator/refs/heads/main/playlists/plex_all.m3u",
+        "groupsToInclude": ["United States"],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
     },
-    {
-      "key": "Plex_CA",
-      "value": {
-        "url": "https://raw.githubusercontent.com/jayeAch/app-m3u-generator/refs/heads/main/playlists/plex_ca.m3u",
-        "groupsToInclude": ["International", "Movies", "Chills & Thrills", "Uncategorized", "Comedy", "Hit TV", "Sci-Fi & Action", "Drama TV", "True Crime"],
-        "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
-      }
-    },
-    {
-      "key": "Plex_US",
-      "value": {
-        "url": "https://raw.githubusercontent.com/jayeAch/app-m3u-generator/refs/heads/main/playlists/plex_us.m3u",
-        "groupsToInclude": ["International", "Movies", "Chills & Thrills", "Uncategorized", "Movies, Drama TV", "Comedy", "Hit TV", "Sci-Fi & Action", "True Crime"],
-        "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
-      }
-    },
-
     {
       "key": "TV",
       "value": {
