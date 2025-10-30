@@ -2,6 +2,17 @@ import json
 
 # Define the massive list ONCE. PASTE YOUR FULL LIST HERE.
 GLOBAL_EXCLUDE_LIST = [
+"JLTV",
+"Cooking Channel",
+"The Yellow Couch with Jeremy Lynch",
+"WABC (New York)",
+"WCBS (New York)",
+"WNYW (New York)",
+"WNBC (New York)",
+"History SD",
+"History HD",
+"Teen Mom UK",
+"Catfish UK",
 "A Touch of Frost",
 "AXS TV Now",
 "All Reality We TV",
