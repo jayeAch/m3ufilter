@@ -4,9 +4,12 @@ import os
 
 # Define the massive list ONCE. PASTE YOUR FULL LIST HERE.
 GLOBAL_EXCLUDE_LIST = [
+"Real Housewives",
+"Logo SD",
+"Logo HD",
 "WDIO ABC News",
 "WPDE 15 ABC",
-"WSBT 22 CBS"
+"WSBT 22 CBS",
 "10 NBC WJAR",
 "6 NEWS NBC - WJAC",
 "ABC 13 News - WLOS",
@@ -46,9 +49,10 @@ GLOBAL_EXCLUDE_LIST = [
 "Lassie",
 "Leave It to Beaver",
 "Discovery HD",
+"Discovery SD",
 "Demand Africa",
 "Discovery Family",
-"Discovery Life HD",
+"Discovery Life",
 "The Wiggles",
 "JLTV",
 "Cooking Channel",
