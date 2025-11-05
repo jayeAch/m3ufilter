@@ -184,6 +184,14 @@
       }
     },
     {
+      "key": "IPTV",
+      "value": {
+        "url": "https://iptv-org.github.io/iptv/index.m3u",
+        "groupsToInclude": ["General;Music", "Family", "Movies", "Classic", "Entertainment", "Classic;Comedy;Series", "Animation", "Animation;Entertainment", "General", "Classic;Music", "Entertainment;Family", "Animation;Family", "Classic;Series", "Animation;Classic", "Entertainment", "Classic;Movies", "Family", "Family;Movies", "Music", "General", "Music", "Entertainment;General;Movies;Music", "General", "Entertainment", "General;Music", "Entertainment", "Series", "Animation", "Entertainment;Music", "Comedy", "Series", "Movies", "Entertainment", "Family", "Animation;General", "Entertainment;Series", "Entertainment;Interactive", "General", "Animation;Music", "Music", "Comedy", "Entertainment", "Entertainment", "Entertainment;Movies;Series", "Movies;Music", "Animation;General", "Comedy", "Entertainment;General", "General;Music", "General", "Animation", "Undefined", "Animation;Classic;Entertainment;Family;Movies", "Classic", "Entertainment", "Entertainment;General", "Entertainment;Family;General", "Family;General", "Series", "General", "Classic", "Movies", "General;Series", "Education;Entertainment", "Movies;Series", "Music", "Animation;Entertainment", "Comedy;Movies;Series", "Entertainment;Music", "Music", "Animation", "Entertainment;Music", "Family;General;Movies", "Music", Entertainment", "Movies", "General", "Entertainment;Family;General", "Family", "Entertainment;Music", "Entertainment;General;Series"],
+        "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
+      }
+    },
+    {
       "key": "TheTVApp",
       "value": {
         "url": "https://raw.githubusercontent.com/BuddyChewChew/My-Streams/refs/heads/main/TheTVApp.m3u8",
