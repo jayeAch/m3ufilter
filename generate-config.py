@@ -3,6 +3,7 @@ import subprocess
 import os 
 
 GLOBAL_EXCLUDE_LIST = [
+"Cuando Los Angeles Caen",
 "ÚNICA TV",
 "Christmas",
 "Fireplace",
