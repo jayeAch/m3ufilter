@@ -3,6 +3,14 @@ import subprocess
 import os 
 
 GLOBAL_EXCLUDE_LIST = [
+"Advent Calendar",
+"Envoy FAST",
+"Bridezillas",
+"Braxton Family Values",
+"Miss Universe",
+"The Incredible Hulk",
+"Dungeons & Dragons Adventures",
+"America's Funniest Home Videos",
 "MoreMAX SD",
 "MovieMAX SD",
 "Showtime (E) SD",
