@@ -4,7 +4,7 @@ import os
 
 GLOBAL_EXCLUDE_LIST = [
 
-"Funniest Home Videos"
+"Funniest Home Videos",
 "Baby Einstein",
 "Mi Raza",
 "American Heroes Channel HD",
