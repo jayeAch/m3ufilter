@@ -4,6 +4,8 @@ import os
 
 GLOBAL_EXCLUDE_LIST = [
 
+"Cesar's Pack Leader TV",
+"Victory+",
 "Funniest Home Videos",
 "Baby Einstein",
 "Mi Raza",
