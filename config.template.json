@@ -162,7 +162,7 @@
     {
       "key": "Stirr",
       "value": {
-        "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/refs/heads/main/playlists/stirr_all.m3u",
+        "url": "https://raw.githubusercontent.com/jayeAch/app-m3u-generator/refs/heads/main/playlists/stirr_all.m3u",
         "groupsToInclude": ["Documentary Series, Paranormal Series", "Paranormal Series", "Entertainment Live", "Comedy Live", "Documentary Series, Entertainment Live", "News Flash Live, Entertainment Live", "News Flash Live, STIRR Cities", "Comedy Live, Entertainment Live"],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }

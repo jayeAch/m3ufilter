@@ -4,6 +4,23 @@ import os
 
 GLOBAL_EXCLUDE_LIST = [
 
+"Surfer TV",
+"House of Lies",
+"De største bedrag",
+"Love Stories",
+"The Hills",
+"Are You The One",
+"Harlequin",
+"Pluto TV John Wayne",
+"Northern Exposure",
+"Pluto TV Anime",
+"Pluto TV Wild West",
+"Bowling TV",
+"Bonanza",
+"McLeods døtre & Grantchester",
+"Mona the Vampire",
+"Wrestling Legends TV",
+"Discovery Turbo TV",
 "Cesar's Pack Leader TV",
 "Victory+",
 "Funniest Home Videos",
