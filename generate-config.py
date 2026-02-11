@@ -4,6 +4,10 @@ import os
 
 GLOBAL_EXCLUDE_LIST = [
 
+"Remember the ‘80s",
+"Music Legends",
+"Flashback 70s",
+"Nothin' But 90s",
 "Surfer TV",
 "House of Lies",
 "De største bedrag",
