@@ -4,6 +4,8 @@ import os
 
 GLOBAL_EXCLUDE_LIST = [
 
+"Property Brothers",
+"Four in a Bed",
 "Remember the ‘80s",
 "Music Legends",
 "Flashback 70s",
