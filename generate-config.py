@@ -4,6 +4,7 @@ import os
 
 GLOBAL_EXCLUDE_LIST = [
 
+"Series K ",
 "Pluto TV Motor",
 "Property Brothers",
 "Four in a Bed",
