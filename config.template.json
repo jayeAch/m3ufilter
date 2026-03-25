@@ -28,7 +28,11 @@
           "Comedy",
           "Sitcom",
           "Drama",
-          "Halloween"
+          "Halloween",
+	  "Adventure",
+	  "Art",
+	  "Hunting",
+	  "Special"
         ],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
@@ -180,6 +184,14 @@
       "value": {
         "url": "https://raw.githubusercontent.com/BuddyChewChew/My-Streams/refs/heads/main/TheTVApp.m3u8",
         "groupsToInclude": ["TheTVApp"],
+        "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
+      }
+    },
+    {
+      "key": "us",
+      "value": {
+        "url": "https://raw.githubusercontent.com/iptv-org/iptv/refs/heads/master/streams/us.m3u",
+        "groupsToInclude": [],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
     }
