@@ -4,6 +4,18 @@ import os
 
 GLOBAL_EXCLUDE_LIST = [
 
+"Gospel Truth",
+"GOD TV",
+"Payvand",
+"Kitchen Serbia",
+"Wise TV",
+"Toonami",
+"DerryTV",
+"Dr. Gene Scott",
+"Tin TV",
+"Payam",
+"Hope Channel",
+"CSat TV",
 "Christian Youth",
 "JBS",
 "Biz TV",
