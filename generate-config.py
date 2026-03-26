@@ -4,6 +4,7 @@ import os
 
 GLOBAL_EXCLUDE_LIST = [
 
+"WSB", "WSBS", "WSCV", "WTNH", "WTTG", "WTVJ", "WTVT", "WTXF", "WUPA", "WVIT",
 "Freeform (720p)",
 "Rainbow Ruby",
 "Revolt",
@@ -171,16 +172,6 @@ GLOBAL_EXCLUDE_LIST = [
 "WPXX",
 "WRC",
 "WRDELD1",
-"WSB",
-"WSBS",
-"WSCV",
-"WTNH",
-"WTTG",
-"WTVJ",
-"WTVT",
-"WTXF",
-"WUPA",
-"WVIT",
 "WWONTVChannel48",
 "WWOR",
 "WXIX",
@@ -1078,25 +1069,25 @@ GLOBAL_EXCLUDE_LIST = [
 "Anger Management",
 "Always Funny",
 "BritBox Mysteries",
-" 00s Replay",
-" 48 Hours",
-" 70s Cinema",
-" 80s Rewind",
-" 90s Throwback",
-" American Crimes",
-" Black Family Sitcoms",
-" Classic Movies Channel",
-" Court TV",
-" Crime 360 by A&E",
-" Dateline 24/7",
-" Pluto TV Trending Now",
-" Pluto TV True Crime",
-" Pluto TV Westerns",
-" The Addams Family",
-" The New Detectives",
-" The Walking Dead Universe",
-" Universal Action",
-" Universal Crime",
+"00s Replay",
+"48 Hours",
+"70s Cinema",
+"80s Rewind",
+"90s Throwback",
+"American Crimes",
+"Black Family Sitcoms",
+"Classic Movies Channel",
+"Court TV",
+"Crime 360 by A&E",
+"Dateline 24/7",
+"Pluto TV Trending Now",
+"Pluto TV True Crime",
+"Pluto TV Westerns",
+"The Addams Family",
+"The New Detectives",
+"The Walking Dead Universe",
+"Universal Action",
+"Universal Crime",
 "#SayWhat?!",
 "10 NBC WJAR - (Providence RI*)",
 "123 GO!",
@@ -1321,7 +1312,7 @@ GLOBAL_EXCLUDE_LIST = [
 "Flashpoint",
 "Football",
 "Forensic Files",
-" Forensic Files",
+"Forensic Files",
 "Fox 25 - KOKH - (Oklahoma City OK*)",
 "Fox 26 - KMPH - (Fresno CA*)",
 "Fox Business Network",
@@ -1726,7 +1717,7 @@ except FileNotFoundError:
 
 # Replace the placeholder with the actual JSON-formatted list
 # json.dumps() correctly formats the list as a JSON string
-final_content = template_content.replace('{{GLOBAL_EXCLUDE_LIST}}',json.dumps(GLOBAL_EXCLUDE_LIST, separators=(',',':')))
+final_content = template_content.replace('{{GLOBAL_EXCLUDE_LIST}}',json.dumps(GLOBAL_EXCLUDE_LIST, separators=(',',':'), ensure_ascii=False))
 
 # Write the final config file that the app will use
 with open('config.tmp.json', 'w') as f:
@@ -1736,7 +1727,7 @@ with open('config.tmp.json', 'w') as f:
 try:
     with open('config.json', 'w') as output_file:
         subprocess.run(
-            ['jq', '.', '-c', 'config.tmp.json'],  # Format the entire JSON file
+            ['jq', '-c', '.', 'config.tmp.json'],  # Format the entire JSON file
             check=True,
             stdout=output_file
         )

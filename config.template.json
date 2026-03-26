@@ -3,7 +3,7 @@
     {
       "key": "Tubi",
       "value": {
-        "url": "https://github.com/jayeAch/tubi-scraper/releases/download/latest-tubi-data/tubi_playlist.m3u",
+        "url": "https://github.com/jayeAch/app-m3u-generator/releases/download/latest-playlists/tubi_all.m3u",
         "groupsToInclude": ["Movie Channels", "Horror", "Mystery", "TV Dramas", "Tubi Originals", "Kids & Family", "Comedy", "Weather", "True Crime", "Sci-Fi & Supernatural", "Classic TV", "Halloween"],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
@@ -11,7 +11,7 @@
     {
       "key": "Roku",
       "value": {
-        "url": "https://raw.githubusercontent.com/jayeAch/app-m3u-generator/refs/heads/main/playlists/roku_all.m3u",
+        "url": "https://github.com/jayeAch/app-m3u-generator/releases/download/latest-playlists/roku_all.m3u",
         "groupsToInclude": [
           "Dark Comedy",
           "Weather",
@@ -174,7 +174,7 @@
     {
       "key": "Plex_All",
       "value": {
-        "url": "https://raw.githubusercontent.com/jayeAch/app-m3u-generator/refs/heads/main/playlists/plex_all.m3u",
+        "url": "https://github.com/jayeAch/app-m3u-generator/releases/download/latest-playlists/plex_all.m3u",
         "groupsToInclude": ["United States"],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
