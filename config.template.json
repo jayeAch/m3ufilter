@@ -166,7 +166,7 @@
     {
       "key": "test",
       "value": {
-        "url": "https://t.freetv.fun/m3u/united_states.m3u",
+        "url": "https://iptv-org.github.io/iptv/countries/us.m3u",
         "groupsToInclude": [],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
@@ -190,8 +190,8 @@
     {
       "key": "us",
       "value": {
-        "url": "https://raw.githubusercontent.com/iptv-org/iptv/refs/heads/master/streams/us.m3u",
-        "groupsToInclude": [],
+        "url": "https://iptv-org.github.io/iptv/countries/us.m3u",
+        "groupsToInclude": ["Classic", "Comedy", "Entertainment", "Family", "Movies", "Series", "Undefined", "Weather"],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
     }
