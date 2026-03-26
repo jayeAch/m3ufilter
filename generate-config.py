@@ -4,6 +4,18 @@ import os
 
 GLOBAL_EXCLUDE_LIST = [
 
+"KMEX-DT1",
+"Ganj e Hozour TV",
+"Legacy",
+"Penn & Teller",
+"OAN Encore",
+"Newsy",
+"Flowers TV USA",
+"Duck Hunting TV",
+"Celebrity Scene TV",
+"Cloudflare TV",
+"Zarin TV",
+"Zoom TV Kurdish",
 "VOA Persian",
 "VOA TV",
 "Southeastern Channel",
