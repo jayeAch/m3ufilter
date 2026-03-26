@@ -3,7 +3,7 @@
     {
       "key": "Tubi",
       "value": {
-        "url": "https://raw.githubusercontent.com/jayeAch/app-m3u-generator/refs/heads/main/playlists/tubi_all.m3u",
+        "url": "https://github.com/jayeAch/tubi-scraper/releases/download/latest-tubi-data/tubi_playlist.m3u",
         "groupsToInclude": ["Movie Channels", "Horror", "Mystery", "TV Dramas", "Tubi Originals", "Kids & Family", "Comedy", "Weather", "True Crime", "Sci-Fi & Supernatural", "Classic TV", "Halloween"],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
