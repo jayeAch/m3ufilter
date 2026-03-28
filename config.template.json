@@ -40,14 +40,14 @@
     {
       "key": "SamsungTVPlusUS",
       "value": {
-        "url": "https://raw.githubusercontent.com/jayeAch/app-m3u-generator/refs/heads/main/playlists/samsungtvplus_us.m3u",
+        "url": "https://github.com/jayeAch/app-m3u-generator/releases/download/latest-playlists/samsungtvplus_us.m3u",
         "groupsToInclude": [
           "Movies",
           "Sci-Fi & Horror",
           "Action & Drama",
           "Comedy",
           "Crime",
-          "Halloween"
+          "Halloween", "Action", "Sci-Fi"
         ],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
@@ -159,14 +159,6 @@
       "key": "PlutoTV_CA",
       "value": {
         "url": "https://github.com/jayeAch/pluto_tv_scraper/releases/download/latest/plutotv_CA.m3u8",
-        "groupsToInclude": [],
-        "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
-      }
-    },
-    {
-      "key": "test",
-      "value": {
-        "url": "https://iptv-org.github.io/iptv/countries/us.m3u",
         "groupsToInclude": [],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
