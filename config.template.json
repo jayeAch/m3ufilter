@@ -188,7 +188,7 @@
       }
     },
     {
-      "key": "777",
+      "key": "tvmate",
       "value": {
         "url": "https://github.com/jayeAch/iptv-m3u-playlist-parser/releases/download/tvmate-playlist/tvmate.m3u",
         "groupsToInclude": [],
