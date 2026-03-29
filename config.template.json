@@ -186,6 +186,15 @@
         "groupsToInclude": ["Classic", "Comedy", "Entertainment", "Family", "Movies", "Series", "Undefined", "Weather"],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
+    },
+    {
+      "key": "777",
+      "value": {
+        "url": "https://raw.githubusercontent.com/nestor223/cineyseries_m3u/refs/heads/main/cineyseries_m3u",
+        "groupsToInclude": [],
+        "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
+      }
     }
   ]
 }
+ 
