@@ -63,7 +63,7 @@ export const handleGetm3u = async (options: {
     const serverResponse = await download({ url: filterOptions.url });
 
     // Quick performance win: Size limit to prevent memory issues (consider streaming for large files)
-    if (serverResponse.data.length > 10 * 1024 * 1024) { // 10MB threshold
+    if (serverResponse.data.length > 60 * 1024 * 1024) { // 60MB threshold
       throw new UpstreamError('Playlist too large to process');
     }
 
