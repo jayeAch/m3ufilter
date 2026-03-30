@@ -190,8 +190,8 @@
     {
       "key": "tvmate",
       "value": {
-        "url": "https://github.com/jayeAch/iptv-m3u-playlist-parser/releases/download/tvmate-playlist/tvmate.m3u",
-        "groupsToInclude": [],
+        "url": "https://github.com/jayeAch/tvmate/releases/download/latest-playlist/playlist.m3u",
+        "groupsToInclude": ["2020 Movies","2020 TV Series","2021  TV Series","2021 Movies","2022 Movies","2022 Series","2023 Movies","2023 TV Series","2024 Movies","2024 TV Series","2025 MOVIES","2025 TV Series","2026 Movies","2026 TV Series","24/7 CHANNELS","Action Movies","Alien Movie Collection","All Series","Batman Movies Collection","Battlestar Galactica Movie Collection 1, 2, 3, 4","CANADA","Cartoon Movies","Christmas Movies","Clint Eastwood HD Movies Collection","Comedy","Drama Movies","Family","Friday the 13th Complete Collection","HULU","Horror","Jackie Chan Movies Collection","KIDS ZONE","MOVIE NETWORKS","Mafia Movies","Marvel Animated Movies Collection","Mission Impossible Movies","Netflix Movies","Planet of the Apes Movie Collection","Resident Evil Six Movie Collection","Rocky Movies Collection","Romance","Scary Movie Collection","Science Fiction","Star Trek Movie Collection","Star Wars Movies Collection","Starship Troopers 5 Movie Collection","Superman Movies Collection","The Avengers 4 Movie Collection","The Fast And The Furious Movie Collection","The Terminator 5 Movie Collection","The Texas Chainsaw Massacre Collection","The Transporter Complete 4 Movie Collection","Thriller Movies","Top 220 Movies - The Movie Database IMDB","UK UNITED KINGDOM","USA","War Movies","X-Men Movies Collection"],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
     }
