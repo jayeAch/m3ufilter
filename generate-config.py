@@ -353,7 +353,6 @@ GLOBAL_EXCLUDE_LIST = [
 "Christmas",
 "Christmas 365",
 "Christmas Plus",
-"Cine",
 "Cinépolis Channel",
 "Circle ",
 "Cirque du Soleil",
