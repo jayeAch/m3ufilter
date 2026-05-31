@@ -11,9 +11,15 @@ GLOBAL_EXCLUDE_LIST = [
 "б", "в", "г", "д", "ё", "ж", "з", "и", "й", "к", "л", "м", "н", "п", "т", "ф", "ц", "ч", "ш", "щ", "ъ", "ы", "ь", "э", "ю", "я", "Б", "В", "Г", "Д", "Ё", "Ж", "З", "И", "Й", "К", "Л", "М", "Н", "П", "Т", "Ф", "Ц", "Ч", "Ш", "Щ", "Ъ", "Ы", "Ь", "Э", "Ю", "Я",
 
 # All other entries (alphabetized, case-sensitive, deduplicated)
+"Alaska State Troopers",
+"Joysauce",
+"I Shouldn't Be Alive",
+#
+"The Raccoons",
+"Deal Masters",
+"Gustav & Linse",
 "One Piece",
 "Space Live",
-#
 "80's Sitcom Flashback",
 "Sams Bar",
 "Man with a Plan",
@@ -40,7 +46,6 @@ GLOBAL_EXCLUDE_LIST = [
 "Stargate",
 "Battlestar Galactica",
 "Deep Space Nine",
-#
 "The Great British Baking Channel",
 "The Prof G",
 "Feels Like Home",

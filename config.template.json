@@ -49,10 +49,10 @@
       }
     },
     {
-      "key": "Plex_All",
+      "key": "Plex_US",
       "value": {
-        "url": "https://github.com/jayeAch/app-m3u-generator/releases/download/latest-playlists/plex_all.m3u",
-        "groupsToInclude": ["United States"],
+        "url": "https://github.com/jayeAch/app-m3u-generator/releases/download/playlists-latest/plex_us.m3u",
+        "groupsToInclude": [],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
     },
