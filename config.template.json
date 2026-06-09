@@ -57,6 +57,30 @@
       }
     },
     {
+      "key": "Samsung_US",
+      "value": {
+        "url": "https://github.com/jayeAch/app-m3u-generator/releases/download/playlists-latest/samsungtvplus_us.m3u",
+        "groupsToInclude": [],
+        "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
+      }
+    },
+    {
+      "key": "LocalNow",
+      "value": {
+        "url": "https://www.apsattv.com/localnow.m3u",
+        "groupsToInclude": ["LocalNow🇺🇸: Action", "LocalNow🇺🇸: Classic TV", "LocalNow🇺🇸: Comedy", "LocalNow🇺🇸: Crime & Drama", "LocalNow🇺🇸: Documentary", "LocalNow🇺🇸: Entertainment", "LocalNow🇺🇸: Horror and SciFi", "LocalNow🇺🇸: Movies and TV", "LocalNow🇺🇸: New On Local Now", "LocalNow🇺🇸: Recommended", "LocalNow🇺🇸: True Crime"],
+        "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
+      }
+    },
+    {
+      "key": "LGTV",
+      "value": {
+        "url": "https://raw.githubusercontent.com/BuddyChewChew/lg-playlist-generator/refs/heads/main/lg_channels_us.m3u",
+        "groupsToInclude": ["Comedy", "Crime", "Documentary", "Drama", "Entertainment", "Lifestyle", "Music", "TV & Movies"],
+        "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
+      }
+    },
+    {
       "key": "TheTVApp",
       "value": {
         "url": "https://raw.githubusercontent.com/BuddyChewChew/My-Streams/refs/heads/main/TheTVApp.m3u8",
