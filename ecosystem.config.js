@@ -11,9 +11,10 @@ module.exports = {
     restart_delay: 3000,
     max_restarts: 10,
     node_args: [
-      "--max-old-space-size=128",
+      "--max-old-space-size=96",
       "--max-semi-space-size=8",
-      "--optimize-for-size",
+      "--compact-on-every-full-gc",
+      "--memory-reducer-for-small-heaps",
     ],
     env: {
       NODE_ENV: "production"
