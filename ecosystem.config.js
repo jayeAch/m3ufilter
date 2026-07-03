@@ -13,8 +13,10 @@ module.exports = {
     node_args: [
       "--max-old-space-size=96",
       "--max-semi-space-size=8",
-      "--compact-on-every-full-gc",
-      "--memory-reducer-for-small-heaps",
+      "--gc-memory-reducer-start-delay-ms=8000",
+      "--memory-reducer-gc-count=2",
+      "--optimize-for-size",
+      "--memory-reducer",
     ],
     env: {
       NODE_ENV: "production"
