@@ -11,7 +11,7 @@ module.exports = {
     restart_delay: 3000,
     max_restarts: 10,
     node_args: [
-      "--max-old-space-size=64",
+      "--max-old-space-size=96",
       "--max-semi-space-size=8",
       "--gc-memory-reducer-start-delay-ms=8000",
       "--memory-reducer-gc-count=2",
