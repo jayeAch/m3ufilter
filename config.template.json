@@ -89,6 +89,14 @@
       }
     },
     {
+      "key": "TCL",
+      "value": {
+        "url": "https://raw.githubusercontent.com/BuddyChewChew/tcl-playlist-generator/refs/heads/main/tcl.m3u8",
+        "groupsToInclude": ["Classic TV", "Comedy", "Criminal Investigations", "Daytime TV", "Drama", "Entertainment", "Horror", "Movies", "Sci-Fi & Paranormal", "TV Favorites", "True Crime"],
+        "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
+      }
+    },
+    {
       "key": "TheTVApp",
       "value": {
         "url": "https://raw.githubusercontent.com/BuddyChewChew/My-Streams/refs/heads/main/TheTVApp.m3u8",
