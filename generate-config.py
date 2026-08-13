@@ -1291,7 +1291,6 @@ GLOBAL_EXCLUDE_LIST = [
 "The Addams Family",
 "The Amazing Race",
 "The Archive ",
-"The Asylum",
 "The Biggest Loser",
 "The Black Effect",
 "The Boat Show",

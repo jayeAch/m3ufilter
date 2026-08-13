@@ -97,6 +97,14 @@
       }
     },
     {
+      "key": "ROKU",
+      "value": {
+        "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/refs/heads/main/playlists/roku_all.m3u",
+        "groupsToInclude": ["Comedy", "Crime", "Crime Drama", "Law", "Movies", "Other", "Paranormal", "Romance", "TV & Entertainment", "Weather"],
+        "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
+      }
+    },
+    {
       "key": "TheTVApp",
       "value": {
         "url": "https://raw.githubusercontent.com/BuddyChewChew/My-Streams/refs/heads/main/TheTVApp.m3u8",
