@@ -100,7 +100,7 @@
       "key": "ROKU",
       "value": {
         "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/refs/heads/main/playlists/roku_all.m3u",
-        "groupsToInclude": ["Comedy", "Crime", "Crime Drama", "Law", "Movies", "Other", "Paranormal", "Romance", "TV & Entertainment", "Weather"],
+        "groupsToInclude": ["Art", "Bus./Financial", "Comedy", "Crime", "Crime Drama", "Educational", "Food", "Game Show", "Health", "Home Improvement", "House/Garden", "Law", "Movies", "Other", "Paranormal", "Pro Wrestling", "Shopping", "TV & Entertainment", "Weather"],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
     },

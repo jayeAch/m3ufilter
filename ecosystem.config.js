@@ -12,14 +12,15 @@ module.exports = {
     max_restarts: 10,
     node_args: [
       "--max-old-space-size=96",
-      "--max-semi-space-size=8",
+      "--max-semi-space-size=2",
+      "--jitless",
       "--gc-memory-reducer-start-delay-ms=8000",
       "--memory-reducer-gc-count=2",
-      "--optimize-for-size",
       "--memory-reducer",
     ],
     env: {
-      NODE_ENV: "production"
+      NODE_ENV: "production",
+      UV_THREADPOOL_SIZE: "1"
     }
   }]
 };
