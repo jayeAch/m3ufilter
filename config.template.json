@@ -60,7 +60,7 @@
       "key": "Samsung_US",
       "value": {
         "url": "https://github.com/jayeAch/app-m3u-generator/releases/download/playlists-latest/samsungtvplus_us.m3u",
-        "groupsToInclude": [],
+        "groupsToInclude": ["Action & Drama", "Comedy", "Crime", "Movies", "Sci-Fi & Horror", "Western & Classic TV"],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
     },
@@ -101,6 +101,22 @@
       "value": {
         "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/refs/heads/main/playlists/roku_all.m3u",
         "groupsToInclude": ["Art", "Bus./Financial", "Comedy", "Crime", "Crime Drama", "Educational", "Food", "Game Show", "Health", "Home Improvement", "House/Garden", "Law", "Movies", "Other", "Paranormal", "Pro Wrestling", "Shopping", "TV & Entertainment", "Weather"],
+        "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
+      }
+    },
+    {
+      "key": "Tubi",
+      "value": {
+        "url": "https://github.com/jayeAch/app-m3u-generator/releases/download/playlists-latest/tubi_all.m3u",
+        "groupsToInclude": ["Classic TV", "Comedy", "Horror", "Movie Channels", "Mystery", "Sci-Fi & Supernatural", "TV Dramas", "True Crime"],
+        "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
+      }
+    },
+    {
+      "key": "Xumo",
+      "value": {
+        "url": "https://raw.githubusercontent.com/BuddyChewChew/xumo-playlist-generator/refs/heads/main/playlists/xumo_playlist.m3u",
+        "groupsToInclude": ["Action & Drama", "Classic TV", "Comedy", "Crime TV", "Daytime TV", "Horror & Sci-Fi", "Movies"],
         "channelsToExclude": {{GLOBAL_EXCLUDE_LIST}}
       }
     },
